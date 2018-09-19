@@ -18,23 +18,25 @@
 		<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 		
         <!-- Styles -->
-		<link rel="stylesheet" href="{{ asset('css/home.css')}} " type="text/css"/>
+		<link rel="stylesheet" href="{{ asset('css/site.css')}} " type="text/css"/>
 		
     </head>
     <body>
-		<header>
-			<div id="icon" class="justify-content-end">
-				
+		<header id="home_header">
+			<img src="{{ asset('img/pizza_mesa.jpg')  }}" />
+			<div class="d-flex align-items-end justify-content-center" style="height: 100%;">
+				<div id="home_icon">
+					<img src="{{ asset('img/logo_bg_black.png')  }}" />
+				</div>
 			</div>
 		</header>
-		<nav>
-			<ul class="nav justify-content-center float-left">
-					<li class="nav-item"><a class="nav-link">PEÇA AGORA</a></li>
-					<li class="nav-item orange"><a class="nav-link">CARDÁPIO</a></li>
-			</ul>
-			<ul class="nav justify-content-center float-right">
-					<li class="nav-item orange"><a class="nav-link">PROMOÇÕES</a></li>
-					<li class="nav-item"><a class="nav-link">QUEM SOMOS</a></li>	
+		<nav id="home_nav" class="nav justify-content-center">
+			<ul class="nav justify-content-between align-items-center">
+				<li class="nav-item show"><a href="{{ route('pedido') }}" class="nav-link m-3">PEÇA AGORA</a></li>
+				<li class="nav-item orange show"><a href="#" class="nav-link m-3">CARDÁPIO</a></li>
+                <li class="nav-item hide"><a href="#" class="nav-link m-3"></a></li><!-- Criar o meio vazio para md lg -->
+				<li class="nav-item orange show"><a href="#" class="nav-link m-3">PROMOÇÕES</a></li>
+				<li class="nav-item show"><a href="#" class="nav-link m-3">QUEM SOMOS</a></li>	
 			</ul>
 		</nav>
     </body>

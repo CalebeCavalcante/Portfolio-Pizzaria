@@ -18,22 +18,22 @@
 		<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 		
         <!-- Styles -->
-		<link rel="stylesheet" href="{{ asset('css/delivery.css')}} " type="text/css"/>
+		<link rel="stylesheet" href="{{ asset('css/site.css')}} " type="text/css"/>
 		
     </head>
     <body>
-		<img src="{{asset('img/pizza_caixa.jpg')}}"/>
-		<div id="container" class="container">	
+		<img id="dely_body_img" src="{{asset('img/pizza_caixa.jpg')}}"/>
+		<div id="dely_container" class="container">	
 			<div>
-				<div id="delivery">
+				<div id="dely_delivery">
 					<span>Lojas</span>
 				</div>
-				<div id="bg_image_logo" class="float-right">
+				<div id="dely_bg_image_logo" class="float-right">
 					<img class="rounded-circle" src="{{asset('img/logo_bg_white.png')}}" />
 				</div>				
 			</div>
 			<div>
-				<div id="bg_image_casa">
+				<div id="dely_bg_image_casa">
 					<div class="element svg" style="width: 197px; height: 107px; transform: translate(-40px, -100px); opacity: 1;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 588.32 650.32" style="position: absolute;">
  <defs>
   <filter id="CANVA2_d">

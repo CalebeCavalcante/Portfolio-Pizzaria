@@ -18,28 +18,31 @@
 		<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 		
         <!-- Styles -->
-		<link rel="stylesheet" href="{{ asset('css/pedido.css')}} " type="text/css"/>
+		<link rel="stylesheet" href="{{ asset('css/site.css')}} " type="text/css"/>
 		
     </head>
     <body>
-		<img id="img_background" src="{{asset('img/pizza_prato.jpg')}}"/>
+		<img id="pedido_img_background" src="{{asset('img/pizza_prato.jpg')}}"/>
 		<div class="container">	
 			<div class="row">
 				<div class="col-6">
-					<div id="delivery">
+					<div id="pedido_delivery">
 						<span>PEÇA AGORA</span>
 					</div>
 				</div>
 				<div class="col-6">
-					<div id="logo_pizzafood" class="float-right">
+					<div id="pedido_logo_pizzafood" class="d-flex justify-content-center align-middle">
 						<img class="rounded-circle" src="{{asset('img/logo_bg_white.png')}}" />
 					</div>
 				</div>				
 			</div>
 			<div class="row">
-				<div id="bg_image_casa">
+				<div id="pedido_bg_image_casa" class="col-6 d-flex justify-content-center">
 					<img class="rounded" src="{{asset('img/icon_casa.png')}}" />
-					<div class="element svg" style="width: 87px; height: 97px; transform: translate(270px, -99px); opacity: 1;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 588.32 650.32" style="position: absolute;">
+				</div>
+				<div class="col-6 d-flex justify-content-center">
+				<div class="element svg" id="pedido_bg_image_loja" >
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 588.32 650.32" style="position: absolute;">
  <defs>
   <filter id="CANVA2_d">
    <feGaussianBlur in="SourceGraphic" stdDeviation="0.9"></feGaussianBlur>
@@ -71,10 +74,14 @@
 				</div>
 			</div>
 			<div class="row">
-				<div id="links">
-					<ul  class="nav">
-						<li class="nav-item"><a href="{{ route('delivery') }}" class="nav-link" >DELIVERY</a></li>
-						<li class="nav-item"><a href="{{ route('loja') }}" class="nav-link">RETIRAR NA LOJA</a></li>
+				<div id="pedido_links" class="col-12"> 
+					<ul  class="nav justify-content-center row">
+						<li class="nav-item col-6 text-center">
+							<a href="{{ route('delivery') }}" class="nav-link" >DELIVERY</a>
+						</li>
+						<li class="nav-item col-6 text-center">
+							<a href="{{ route('loja') }}" class="nav-link">RETIRAR NA LOJA</a>
+						</li>
 					</ul>
 				</div>
 			</div>

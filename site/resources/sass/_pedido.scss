@@ -4,17 +4,18 @@
 /* Bootstrap */
 @import '~bootstrap/scss/bootstrap';
 
-#img_background {
+#pedido_img_background {
     width: 100vw;
     height: 160vh;
     overflow: hidden;
     position: absolute;
     top: 0px;
     left: 0px;
-    transform: translateX(-0%) translateY(-40%); 
+    transform: translateX(-0%) translateY(-40%);
+    z-index: -99; 
 }
 
-#delivery{
+#pedido_delivery{
     display: inline-block;
     height: 150px;
     width: 200px;
@@ -23,7 +24,7 @@
     clip-path: polygon(0 0, 100% 0%, 100% 66%, 81% 46%, 18% 46%, 18% 18%);
 }
 
-#delivery span {
+#pedido_delivery span {
     color: #FFF;
     float: right;
     margin: 10px;
@@ -32,7 +33,35 @@
     font-size: 18pt;
 }
 
-#logo_pizzafood img { width: 70%; }
+#pedido_logo_pizzafood img { width: 35vw; height: 20vh }
+
+#pedido_bg_image_casa img { width: 35vw; height: 25vh;}
+
+/* Mobile / Tab */
+@media (max-width: 900px) { 
+    #pedido_bg_image_casa img { width: 45vw; height: 25vh; }
+}
+
+#pedido_bg_image_loja {
+    width: 27vw;
+    height: 10vh;
+    transform: translate(3vw, 2.5vh);
+    opacity: 1;
+}
+
+/* Mobile / Tab */
+@media (max-width: 900px) { 
+    #pedido_bg_image_loja img {     
+        width: 37vh;
+        height: 10vh; 
+    }
+}
+
+#pedido_links .nav-link {
+    font-size: 16pt;
+    color: #000;
+    font-family: $fontFamily;
+}
 
 /* Background Site 
 
@@ -132,12 +161,6 @@ body div.imagem-wrapper {
     margin: 0px auto;
     padding: 0px;
     margin-left: calc((100%/3.2));
-}
-
-#links .nav-item {
-	margin-right: 80px;
-	color: #000;
-	font-family: $fontFamily;
 }
 
 #links .nav-link {

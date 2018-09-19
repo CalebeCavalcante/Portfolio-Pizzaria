@@ -18,16 +18,16 @@
 		<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 		
         <!-- Styles -->
-		<link rel="stylesheet" href="{{ asset('css/home.css')}} " type="text/css"/>
+		<link rel="stylesheet" href="{{ asset('css/site.css')}} " type="text/css"/>
 		
     </head>
     <body>
-		<header>
-			<div id="icon" class="justify-content-end">
+		<header id="home_header">
+			<div id="home_icon" class="justify-content-end">
 				
 			</div>
 		</header>
-		<nav>
+		<nav id="home_nav">
 			<ul class="nav justify-content-center float-left">
 					<li class="nav-item"><a class="nav-link">PEÇA AGORA</a></li>
 					<li class="nav-item orange"><a class="nav-link">CARDÁPIO</a></li>
