@@ -1,19 +1,5 @@
-@extends('layouts.site')
-
-@section('body')
-		<img id="dely_body_img" src="{{asset('img/pizza_caixa.jpg')}}"/>
-		<div id="dely_container" class="container">	
-			<div>
-				<div id="dely_delivery">
-					<span>Lojas</span>
-				</div>
-				<div id="dely_bg_image_logo" class="float-right">
-					<img class="rounded-circle" src="{{asset('img/logo_bg_white.png')}}" />
-				</div>				
-			</div>
-			<div>
-				<div id="dely_bg_image_casa">
-					<div class="element svg" style="width: 197px; height: 107px; transform: translate(-40px, -100px); opacity: 1;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 588.32 650.32" style="position: absolute;">
+<div id="svgLoja">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 588.32 650.32" style="position: absolute; height: inherit; width: inherit;">
  <defs>
   <filter id="CANVA2_d">
    <feGaussianBlur in="SourceGraphic" stdDeviation="0.9"></feGaussianBlur>
@@ -41,17 +27,5 @@
  </g>
  <g><rect fill="#666666" height="19.544" transform="matrix(1.5281 0 0 1.5281 53.876 -43.819)" width="300.54" x="7.6334" y="63.804" class="color color-3" data-color="#7f7f7f"></rect></g>
  <g><rect fill="#000000" height="0" stroke-width="48" width="514.97" x="-240.77" y="453.47" class="color color-2" data-color="#bfbfbf"></rect></g>
-</svg></div>
-				</div>
-			</div>
-			<div>
-				<form>
-					<div class="form-group">
-						<input class="text-center form-control"  type="text" name="cep" placeholder="DIGITE SEU CEP"/>
-						<input class="text-center form-control btn" type="submit" name="buscar" value="LOJAS NA REGIÃO"/>
-					</div>
-				</form>
-			</div>
-		</div>
-		
-@endsection
+</svg>
+</div>
