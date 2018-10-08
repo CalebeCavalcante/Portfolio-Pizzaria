@@ -25,7 +25,7 @@
 			<div class="row h-50 justify-content-center align-items-center">
 					<div class="col-12 h-50 logo-delivery">
 						<div class="d-flex justify-content-center">
-							<img class="icon_loja" src="{{ asset('img/icon_loja.png')  }}" />
+							<img  src="{{ asset('img/icon_loja.png')  }}" />
 						</div>
 					</div>
 

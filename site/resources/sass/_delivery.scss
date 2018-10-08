@@ -15,34 +15,17 @@
 
 #delivery-body .logo-delivery {
     div:nth-child(1){ height: 100%; }
-    img.icon_casa{ width: 100px;  height: 71px; } 
+    img { width: 90px;  height: 75px; }
 }
 
 @include media-breakpoint-up(md) {
-	#delivery-body .logo-delivery { img.icon_casa {width: 190px; height: 192px; } }
+	#delivery-body .logo-delivery { img {width: 160px; height: 125px; } }
 }
 
 @include media-breakpoint-up(lg) {
-	#delivery-body .logo-delivery { img.icon_casa {width: 190px; height: 192px; } }
+	#delivery-body .logo-delivery { img {width: 160px; height: 125px; } }
 }
 
 @include media-breakpoint-up(xl) {
-	#delivery-body .logo-delivery { img.icon_casa {width: 190px; height: 192px; } }
-}
-
-
-#delivery-body .logo-delivery {
-    img.icon_loja{ width: 90px;  height: 75px; } 
-}
-
-@include media-breakpoint-up(md) {
-	#delivery-body .logo-delivery { img.icon_loja {width: 160px; height: 125px; } }
-}
-
-@include media-breakpoint-up(lg) {
-	#delivery-body .logo-delivery { img.icon_loja {width: 160px; height: 125px; } }
-}
-
-@include media-breakpoint-up(xl) {
-	#delivery-body .logo-delivery { img.icon_loja {width: 160px; height: 125px; } }
+	#delivery-body .logo-delivery { img {width: 160px; height: 125px; } }
 }
