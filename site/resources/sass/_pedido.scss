@@ -1,105 +1,107 @@
 
-#pedido-body {
+#pedido-body { height: 100vh; @extend %min-container; }
 
-    height: 100vh;
-    width: 100vw;
-    min-height: 100vh;
-    min-width: 100vw;
-
-    a { color: #000; font-family: $fontFamily; }
-}
-
-// XS Portrait Phone
-#pedido-body a { font-size: 12pt; }
-
-@include media-breakpoint-up(md) {
-    #pedido-body a { font-size: 16pt; }    
-}
-
-// XS Portrait Phone
-.bg-opaco { width: 95vw; height: 50vh; }
-
-@include media-breakpoint-up(sm) {
-    .bg-opaco { width: 95vw; height: 80vh; }
+.bg-opaco { 
+    width: 95vw; height: 50vh; 
+    min-height: $min-height/2; min-width: ( $min-width * .95);
 }
 
 @include media-breakpoint-up(md) {
-    .bg-opaco { width: 75vw; height: 60vh; }    
+    .bg-opaco { width: 75vw; min-height: ($min-height * .95);}
 }
 
-@include media-breakpoint-up(xl) {
-    .bg-opaco { width: 75vw; height: 75vh; }    
-}
-
-// XS Portrait Phone
-#peca-agora {
-    position: absolute; 
-    left: 20%;
-    top: 0px;
-    width: 75%;
-
-    span { font-size: 13pt; }
-}
-
-@include media-breakpoint-up(sm) {
-    #peca-agora {
-        span { font-size: 15pt; }
-    }
-}
-
-// MD (min-width: 768px)  iPad 
-@include media-breakpoint-up(md) {
-    #peca-agora {
-        width: 50%;
-        span { font-size: 18pt; }
-    }
-}
-
-// LG (min-width: 992px) iPad Pro
 @include media-breakpoint-up(lg) {
-    #peca-agora {
-        span { font-size: 21pt; }
-    }
-
+    .bg-opaco { height: 50vh; width: 68vw;  }
 }
 
-// XS Portrait Phone
-#peca-agora + div { width: 100%; }
-
-@include media-breakpoint-up(md) {
-    #peca-agora + div { width: 75%; }
-}
-
-// XS Portrait Phone
-#pedido-body .logo-delivery{ width: 87px; height: 65px; }
-
-// MD (min-width: 768px)  iPad 
-@include media-breakpoint-up(md) {
-    #pedido-body .logo-delivery{ width: 190px; height: 250px; }
-}
-
-// XL  (min-width: 1200px) PC
 @include media-breakpoint-up(xl) {
-    #pedido-body .logo-delivery{ width: 100%; height: 100%; }
+    .bg-opaco { height: 75vh;  }
 }
 
-// XS Portrait Phone
-#logo-white img { height: 60%; width: 100%  }
+.bg-opaco .row { min-height: ($min-height/4); }
 
-@include media-breakpoint-up(sm) {
-    #logo-white img { height: 80%; width: 50%; }
+@include media-breakpoint-up(md) {
+    .bg-opaco .row {  min-height: ( ( $min-height * .95 ) / 2 );  }
+}
+
+//.col-6 { border: 0.5px solid black; }
+
+.peca-agora { 
+    padding: 0px;
+    img{ width: 151px; height: 85px;}
+    span{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: unset;
+        width: 151px; 
+        font-size: 13pt;
+        padding: 16px 24px;   
+    }  
 }
 
 @include media-breakpoint-up(md) {
-    #logo-white img { height: 100%; width: 50%; }
+    .peca-agora { 
+        img{ width: 220px; height: 150px;}
+        span{ width: 220px; font-size: 21pt; padding: 24px; }
+    }
 }
 
-// LG (min-width: 992px) iPad Pro
-@include media-breakpoint-up(lg) {    
-    #logo-white img {  height: 90%; width: 65%;  }
+@include media-breakpoint-up(lg) {
+    .peca-agora { 
+        img{ width: 300px; height: 200px;}
+        span{ width: 300px; padding: 35px 75px; }
+    }
 }
 
-// XL  (min-width: 1200px) PC
-@include media-breakpoint-up(xl) {    
-    #logo-white img {  height: 100%; width: 50%;  }
+.logo-white img { height: 95px; width: 89px; }
+
+@include media-breakpoint-up(md) {
+    .logo-white img { height: 150px; width: 150px  }
 }
+
+@include media-breakpoint-up(lg) {
+    .logo-white img { height: 220px; width: 220px  }
+}
+
+.logo-delivery {
+    
+    div:nth-child(1){ height: 80%;  }
+    div:nth-child(2){ height: 20%;  }
+
+    img { width: 111px; height: 111px;}
+    p { margin: 0px; font-size: 16px; }
+}
+
+@include media-breakpoint-up(md) {
+    .logo-delivery {
+        img { width: 211px; height: 211px;}
+        p{ font-size: 21px; }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .logo-delivery {
+        img { width: 280px; height: 280px;}
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .logo-delivery {
+        img { width: 240px;}
+    }
+}
+
+.logo-delivery:nth-child(2) img { width: 100px; height: 100px; }
+
+@include media-breakpoint-up(md) {
+    .logo-delivery:nth-child(2) img { width: 200px; height: 180px; }    
+}
+
+@include media-breakpoint-up(lg) {
+    .logo-delivery:nth-child(2) img { width: 250px; height: 230px; }    
+}
+
+@include media-breakpoint-up(xl) {
+    .logo-delivery:nth-child(2) img { width: 230px; height: 240px; }    
+}    

@@ -1,10 +1,5 @@
 
-#delivery-body {
-    height: 100vh;
-    width: 100vw;
-    min-height: 100vh;
-    min-width: 100vw;
-}
+#delivery-body { height: 100vh; @extend %min-container; }
 
 #delivery-body form { width: 75% }
 
@@ -18,10 +13,36 @@
 	background-color: #000;
 }
 
-// XS Portrait Phone
-#delivery-body .logo-delivery { width: 87px; height: 65px; }
+#delivery-body .logo-delivery {
+    div:nth-child(1){ height: 100%; }
+    img.icon_casa{ width: 100px;  height: 71px; } 
+}
 
-// MD (min-width: 768px)  iPad 
 @include media-breakpoint-up(md) {
-    #delivery-body .logo-delivery{ width: 150px; height: 150px; }
+	#delivery-body .logo-delivery { img.icon_casa {width: 190px; height: 192px; } }
+}
+
+@include media-breakpoint-up(lg) {
+	#delivery-body .logo-delivery { img.icon_casa {width: 190px; height: 192px; } }
+}
+
+@include media-breakpoint-up(xl) {
+	#delivery-body .logo-delivery { img.icon_casa {width: 190px; height: 192px; } }
+}
+
+
+#delivery-body .logo-delivery {
+    img.icon_loja{ width: 90px;  height: 75px; } 
+}
+
+@include media-breakpoint-up(md) {
+	#delivery-body .logo-delivery { img.icon_loja {width: 160px; height: 125px; } }
+}
+
+@include media-breakpoint-up(lg) {
+	#delivery-body .logo-delivery { img.icon_loja {width: 160px; height: 125px; } }
+}
+
+@include media-breakpoint-up(xl) {
+	#delivery-body .logo-delivery { img.icon_loja {width: 160px; height: 125px; } }
 }

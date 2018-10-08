@@ -14,6 +14,10 @@
 ul{ list-style: none; }
 a { text-decoration: none; }
 a, span, div, li, p, input, label {  font-family: $fontFamily;   }
+img { max-height: 100%; max-width: 100%; }
+* { margin: 0px; padding: 0px; }
+
+body{ @extend %min-container; }
 
 .absolute {
 	position: absolute;
@@ -26,13 +30,14 @@ a, span, div, li, p, input, label {  font-family: $fontFamily;   }
 	border: none;
 	padding: 0px;
 	margin: 0px;
-	min-width: 100vw;
+	@extend %min-container;
 	max-height: max-content;
 	height: inherit; 
 }
 
 .fullscreen-img {
 	width: 100vw;
+	@extend %min-container;
 	height: inherit;
 }
 

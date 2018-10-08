@@ -1,6 +1,6 @@
 // Variables
 @import 'variables';
-
+ #home-body { height: 100vh; @extend %min-container; }
 
 /* ########################## 
 *  #    XS Portrait Phone   #
@@ -8,18 +8,19 @@
 */
 #home-header {
 	height: 50vh;
-	min-height: 50vh;
+	min-height: $min-height/2;
 }
 
 #home-nav {
+	min-width: 100vw;
 	height: 50vh;
-	min-height: 50vh;
-	a { font-size: 16pt;}
+	min-height: $min-height/2;
+	a { font-size: 16pt; padding: 0.5rem 0.5rem; display: block; }
 }
 
 #home-logo {
-	width: 204px;
-    height: 168px;
+	width: 160px;
+    height: 160px;
 }
 
 /* ##########################################
@@ -28,15 +29,17 @@
 */
 
 @include media-breakpoint-up(sm) {
+	
 	#home-header {
 		height: 65vh;
-		min-height: 65vh;
+		min-height: ( $min-height * 0.65);
 	}
 
 	#home-nav {
+
 		height: 35vh;
-		min-height: 35vh;
-		a { font-size: 16pt;}
+		min-height: ( $min-height * 0.35);
+		a { font-size: 18pt; }
 	}
 
 }
@@ -48,13 +51,13 @@
 @include media-breakpoint-up(md) {
 	#home-header {
 		height: 85vh;
-		min-height: 85vh;
+		min-height: ( $min-height * 0.85);
 	}
 
 	#home-nav {
 		height: 15vh;
-		min-height: 15vh;
-		a { font-size: 18pt;}
+		min-height: ( $min-height * 0.15);
+		a { font-size: 18pt; padding: 1rem 0.5rem; }
 	}
 
 }
@@ -65,34 +68,13 @@
 */
 
 @include media-breakpoint-up(lg) {
-	#home-header {
-		height: 85vh;
-		min-height: 85vh;
-	}
 
-	#home-nav {
-		height: 15vh;
-		min-height: 15vh;
-		a { font-size: 20pt; }
-	}
+	#home-nav { a { font-size: 18pt; } }
 
 }
 
-
-/* #################################
-*  #   XL  (min-width: 1200px) PC  #
-*  #################################
-*/
 @include media-breakpoint-up(xl) {
-	#home-header {
-		height: 85vh;
-		min-height: 85vh;
-	}
 
-	#home-nav {
-		height: 15vh;
-		min-height: 15vh;
-		a { font-size: 20pt; }
-	}
+	#home-nav { a { font-size: 20pt; } }
 
 }
